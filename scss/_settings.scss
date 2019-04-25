@@ -89,7 +89,7 @@ $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 0;
+$global-radius: 10px;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -98,6 +98,21 @@ $global-prototype-breakpoints: false;
 $global-button-cursor: auto;
 $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
+
+// My Variables
+
+$skyblue: #BEDCFF;
+$verydarkblue: #143050;
+$darkblue: #2F547F;
+$signupbutton: #86BEFF;
+
+// My Fonts
+
+$primary-font: 'Galdeano', Roboto, Arial, sans-serif;
+$secondary-font: 'Vesper Libre', Roboto, Arial, sans-serif;
+$tertiary-font: 'Satisfy', Roboto, Arial, sans-serif;
+$fourth-font: 'Smythe', Roboto, Arial, sans-serif;
+$fifth-font: 'Prompt', Roboto, Arial, sans-serif;
 
 @include add-foundation-colors;
 $print-hrefs: true;
@@ -283,7 +298,7 @@ $button-font-family: inherit;
 $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: $primary-color;
+$button-background: $signupbutton;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
@@ -846,7 +861,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-background: $verydarkblue;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
@@ -855,7 +870,7 @@ $topbar-unstack-breakpoint: medium;
 // 56. Xy Grid
 // -----------
 
-$xy-grid: true;
+$xy-grid: false;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (

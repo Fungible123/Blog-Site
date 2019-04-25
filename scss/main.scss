@@ -1,0 +1,99 @@
+// Navigation Styles
+
+.top-nav {
+    background-color: $verydarkblue;
+    padding: 10px;
+}
+
+.left-menu li {
+    padding-right: 30px;
+    text-transform: uppercase;
+    a {
+        color: $white;
+        font-family: $fifth-font;
+        &:hover {
+            color: $signupbutton;
+        }
+    }
+}
+
+.home-btn {
+    background-color: $signupbutton;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    a {
+        color: $white;
+        font-family: $fifth-font;
+        &:hover {
+            color: $verydarkblue;
+        }
+    }
+}
+
+.right-menu li {
+    padding-left: 30px;
+    text-transform: uppercase;
+    a {
+        color: $white;
+        font-family: $fifth-font;
+        &:hover {
+            color: $signupbutton;
+        }
+    }
+}
+
+// Hero Styles
+
+.hero-container {
+    background: url('../images/dinadiawan1.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+    z-index: 0;
+    position: relative
+}
+
+.overlay {
+    background-color: $darkblue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: .7;
+}
+
+#hero-row {
+    position: relative;
+    top: 30%;
+    h1, p {
+        color: $white;
+        font-family: $tertiary-font;
+    }
+    h2 {
+        color: $white;
+        font-family: $fourth-font;
+        margin: 10px 10px;
+        text-align: center;
+    }
+    .welcome-container {
+        padding: 10px 30px;
+        @include breakpoint(medium down) {
+            padding: 0px 40px 50px;
+            margin: 0px 5px 10px;
+        }
+    }
+}
+
+.email-container {
+    padding: 10px 30px;
+}
+
+input[type='text'] {
+    margin-bottom: 0px;
+}
+
+.newsletter-portion h2 {
+    margin: 10px 40px;
+}
