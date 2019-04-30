@@ -3,10 +3,6 @@
 .top-nav {
     background-color: $verydarkblue;
     padding: 10px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
     width: 100%;
     @include breakpoint (medium down) {
         padding: 0px;
@@ -34,19 +30,17 @@
             }
         }
     }
-    @include breakpoint (medium down) {
-        visibility: hidden;
-        transform: translateX(-100%);
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
-        &.open {
-            visibility: visible;
-            transform: translateX(0%);
-            opacity: 1;
-        }
-        ul {
-            margin: 10px;
-        }
+    visibility: hidden;
+    transform: translateX(-20%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    &.open {
+        visibility: visible;
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    ul {
+        margin: 10px;
     }
 }
 
@@ -86,19 +80,17 @@
             }
         }
     }
-    @include breakpoint (medium down) {
-        visibility: hidden;
-        transform: translateX(100%);
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
-        &.open {
-            visibility: visible;
-            transform: translateX(0%);
-            opacity: 1;
-        }
-        ul {
-            margin: 10px;
-        }
+    visibility: hidden;
+    transform: translateX(20%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    &.open {
+        visibility: visible;
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    ul {
+        margin: 10px;
     }
 }
 
@@ -110,9 +102,9 @@
     height: 100vh;
     z-index: 0;
     position: relative;
-    padding-top: 100px;
+    padding-top: 50px;
     @include breakpoint (medium down) {
-        padding: 50px 0px;
+        padding: 10px 0px;
     }
 }
 
@@ -129,7 +121,7 @@
 
 #hero-row {
     position: relative;
-    top: 30%;
+    top: 20%;
     h1, p {
         color: $white;
         font-family: $tertiary-font;
@@ -206,6 +198,10 @@ input[type='text'] {
     max-width: 200px;
     img {
         width: 100%;
+        transition: all .3s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
     &:hover {
         box-shadow: $black 1px 0px 5px 1px;
@@ -345,5 +341,173 @@ input[type='text'] {
     padding-top: 30px;
     p {
         font-size: .7em;
+    }
+}
+
+// Blog Page Styling
+
+.search-bar {
+    background: $light-gray;
+    padding: 30px 20px 20px 20px;
+    border-bottom: 2px #ccc solid;
+    margin-bottom: 30px;
+    .search-form {
+        input, .input-group-label {
+            border-color: $medium-gray;
+            font-family: $secondary-font;
+        }
+    }
+}
+
+.article-container {
+    padding-top: 30px;
+}
+
+.article-content {
+    @include flex;
+    @include flex-direction(row);
+    width: 100%;
+    background-color: $light-gray;
+    @include padding(0, 0, 0, 0);
+    @include margin(0, 0, 5, 0);
+    box-shadow: $dark-gray 2px 2px 5px 0px;
+    @include breakpoint (small down) {
+        @include flex;
+        @include flex-direction(column);
+        height: 100vh;
+    }
+    .content-container {
+        width: 50%;
+        padding: 20px 0px 20px 30px;
+        @include breakpoint (small down) {
+            width: 100%;
+            height: 50%;
+            padding: 20px;
+        }
+        a {
+            color: $darkblue;
+            &:hover {
+                color: $signupbutton;
+            }
+            h3 {
+                font-family: $fourth-font;
+                margin: 0px;
+            }
+        }
+        span {
+            font-family: $primary-font;
+            font-size: 1em;
+            margin-right: 30px;
+            color: $dark-gray;
+            img {
+                width: 20px;
+                margin-right: 5px;
+                padding-bottom: 4px;
+            }
+        }
+        p {
+            font-family: $primary-font;
+            @include breakpoint (small down) {
+                margin: 0px;
+            }
+        }
+    }
+    .blog-image-container {
+        width: 50%;
+        margin-left: 50px;
+        background-repeat: no-repeat;
+        background-position: center center;background-size: cover;
+        @include breakpoint (small down) {
+            width: 100%;
+            height: 50%;
+            margin-left: 0px;
+        }
+    }
+}
+
+.side-bar-container {
+    @include padding(0, 0, 0, 1);
+}
+
+.side-bar {
+    background-color: $light-gray;
+    margin-left: 20px;
+    .biography-container {
+        padding: 20px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        img {
+            width: 250px;
+            padding: 0px;
+            margin: 20px 50px;
+            border: 1px solid $medium-gray;
+            border-radius: 10px;
+        }
+        .biography-content {
+            padding: 40px;
+            text-align: center;
+            h4 {
+                font-family: $tertiary-font;
+            }
+            p {
+                font-family: $fourth-font;
+            }
+            a {
+                font-family: $secondary-font;
+            }
+        }
+    }
+    .category-container {
+        width: 100%;
+        margin: 10px 40px;
+        padding: 0px 20px;
+        h4 {
+            padding-bottom: 10px;
+            border-bottom: 1px solid $medium-gray;
+            font-family: $fourth-font;
+        }
+        ul {
+            margin-left: 0px;
+            li {
+                list-style-type: none;
+                border-bottom: 1px solid $medium-gray;
+                p {
+                    margin-bottom: 5px;
+                    margin-top: 10px;
+                    font-family: $primary-font;
+                    span {
+                        float: right;
+                        font-family: $primary-font;
+                    }
+                }
+            }
+        }   
+    }
+    .tags-container {
+        width: 100%;
+        margin: 20px 40px 70px;
+        padding: 0px 20px;
+        h4 {
+            padding-bottom: 10px;
+            border-bottom: 1px solid $medium-gray;
+            font-family: $fourth-font;
+        }
+        ul {
+            margin-left: 0px;
+            li {
+                list-style-type: none;
+                display: inline;
+                font-family: $primary-font;
+                margin: 10px 2px;
+                @include margin(0, .1, 0, 0);
+                a {
+                    color: $white;
+                    cursor: pointer;
+                    &:hover {
+                        color: $darkblue;
+                    }
+                }
+            }
+        }
     }
 }

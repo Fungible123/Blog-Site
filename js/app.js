@@ -22,4 +22,3 @@ const homeBtn = function() {
     });
 }
 homeBtn();
-
