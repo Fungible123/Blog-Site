@@ -392,6 +392,9 @@ input[type='text'] {
             h3 {
                 font-family: $fourth-font;
                 margin: 0px;
+                @include breakpoint (small down) {
+                    font-size: 1.9em;
+                }
             }
         }
         span {
@@ -427,24 +430,42 @@ input[type='text'] {
 
 .side-bar-container {
     @include padding(0, 0, 0, 1);
+    @include breakpoint (medium down) {
+        @include padding(0, 0, 0, .1);
+        margin-bottom: 30px;
+    }
+    @include breakpoint (small down) {
+        width: 100%;
+        @include padding(0, 0, 0, .1);
+    }
 }
 
 .side-bar {
     background-color: $light-gray;
     margin-left: 20px;
+    @include breakpoint (medium down) {
+        margin-left: 0px;
+    }
+    @include breakpoint (small down) {
+        margin-left: 0px;
+    }
     .biography-container {
-        padding: 20px;
+        // padding: 20px;
         margin-top: 0px;
         margin-bottom: 20px;
-        img {
-            width: 250px;
-            padding: 0px;
-            margin: 20px 50px;
-            border: 1px solid $medium-gray;
-            border-radius: 10px;
+        @include breakpoint (small down) {
+            padding: 20px 60px;
+        }
+        .image-biography-container {
+            width: 200px;
+            margin: 10px auto;
+            @include breakpoint (small down) {
+                padding: 0px 20px;
+                margin: 10px auto;
+            }
         }
         .biography-content {
-            padding: 40px;
+            padding: 20px 40px 20px;
             text-align: center;
             h4 {
                 font-family: $tertiary-font;
@@ -454,6 +475,10 @@ input[type='text'] {
             }
             a {
                 font-family: $secondary-font;
+                color: $darkblue;
+                &:hover {
+                    color: $signupbutton;
+                }
             }
         }
     }
@@ -461,6 +486,9 @@ input[type='text'] {
         width: 100%;
         margin: 10px 40px;
         padding: 0px 20px;
+        @include breakpoint (small down) {
+            margin: 10px 20px;
+        }
         h4 {
             padding-bottom: 10px;
             border-bottom: 1px solid $medium-gray;
@@ -480,13 +508,22 @@ input[type='text'] {
                         font-family: $primary-font;
                     }
                 }
+                a {
+                    color: $darkblue;
+                    &:hover {
+                        color: $signupbutton;
+                    }
+                }
             }
         }   
     }
     .tags-container {
         width: 100%;
-        margin: 20px 40px 70px;
+        margin: 50px 40px 300px;
         padding: 0px 20px;
+        @include breakpoint (medium down) {
+            margin: 50px 40px 100px;
+        }
         h4 {
             padding-bottom: 10px;
             border-bottom: 1px solid $medium-gray;
@@ -506,6 +543,137 @@ input[type='text'] {
                     &:hover {
                         color: $darkblue;
                     }
+                }
+            }
+        }
+    }
+}
+
+// About Page styling
+
+.main-biography-section {
+    margin: 50px 0px;
+    padding: 20px 0px;
+    .biography-heading {
+        @include flex;
+        @include flex-align(center);
+        margin: 20px 0px;
+        h1 {
+            font-family: $tertiary-font;
+            @include breakpoint (small down) {
+                font-size: 2em;
+            }
+        }
+    }
+    .biography-description {
+        margin: 20px 10px;
+        @include breakpoint (small down) {
+            margin: 0px 0px;
+        }
+        p {
+            font-family: $fourth-font;
+            @include breakpoint (small down) {
+                padding: 0px 20px;
+            }
+        }
+    }
+    .website-link-header {
+        margin: 50px 0px;
+        @include flex;
+        @include flex-align(center);
+        h3 {
+            font-family: $fourth-font;
+        }
+    }
+    .website-link {
+        margin: 40px 0px;
+        padding: 10px 40px;
+        a {
+            color: $verydarkblue;
+            transition: all .2s ease-in;
+            &:hover {
+                color: $signupbutton;
+            }
+            h3 {
+                font-family: $tertiary-font;
+                text-align: center;
+            }
+            img {
+                width: 100%;
+                opacity: 1;
+                transition: all .2s ease-in;
+                &:hover {
+                    transform: scale(1.05);
+                    opacity: .6;
+                }
+            }
+        }
+    }
+}
+
+// Contact Page Styling
+
+.contact-header-container {
+    .contact-header {
+        background-color: $light-gray;
+        .contact-header-content {
+            margin: 30px 0px;
+            padding: 80px 50px;
+            @include breakpoint (medium down) {
+                margin: 10px 0px;
+                padding: 50px 50px 10px;
+            }
+            h1 {
+                @include flex;
+                @include flex-align(center, middle);
+                font-family: $tertiary-font;
+            }
+            p {
+                font-family: $tertiary-font;
+                font-size: 1.2em; 
+            }
+        }
+        .contact-image-container {
+            padding: 20px;
+            @include breakpoint (medium down) {
+                padding: 10px 20px 30px 20px;
+            }
+            img {
+                padding: 30px;   
+                @include breakpoint (medium down) {
+                    width: 100%;
+                    padding: 0px 100px;
+                }            
+            }
+        }
+    }
+    .form-main-container {
+        margin: 50px auto;
+        padding: 50px 50px;
+        width: 60%;
+        @include breakpoint (medium down) {
+            width: 100%;
+        }
+        .form-body-container {
+            label {
+                font-family: $primary-font;
+                font-size: 1.2em;
+                margin-top: 10px;
+            }
+            input {
+                background-color: #BEDCFF;
+            }
+            textarea {
+                background-color: #BEDCFF;
+                padding-bottom: 100px;
+            }
+            .input-group-button {
+                width: 100%;
+                padding: 15px;
+                .button {
+                    padding: 10px 50px;
+                    color: $white;
+                    background-color: $darkblue;
                 }
             }
         }
