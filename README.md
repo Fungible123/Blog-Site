@@ -1,47 +1,47 @@
-# Foundation for Sites Template
+## Blog-Site
+- This is a blog website to be included in my portfolio.
+- Website name: My Blog Site
 
-**Please open all issues with this template on the main [Foundation for Sites](https://github.com/zurb/foundation-sites/issues) repo.**
+Published: https://fungible123.github.io/Blog-Site/
 
-This is the basic starter project for [Foundation for Sites 6](http://foundation.zurb.com/sites). It includes a Sass compiler and a starter HTML file for you.
+### Design
 
-## Installation
+- I designed my layout in Figma. 
+- Check out the design here: https://www.figma.com/file/bd4OeY1DBF5FfFc6XbtcnmnK/Blog-Site?node-id=13%3A3
 
-To use this template, your computer needs:
+### Technologies:
 
-- [NodeJS](https://nodejs.org/en/) (0.12 or greater)
-- [Git](https://git-scm.com/)
+#### Github
+ - Used github pages to publish the website
 
-This template can be installed with the Foundation CLI, or downloaded and set up manually.
+#### Foundation V6.4
+ - Used Foundation framework to build the blog site.
 
-### Using the CLI
+#### Foundation Watch
+ - Used Foundation watch to compile Sass, run browsersync, and live watch.
+ 
+#### SASS
+ - Used SASS to style the website
+ 
+#### jQuery
+ - Used jQuery to make the website interactive with animations and effects.
 
-Install the Foundation CLI with this command:
+### Remarks:
 
-```bash
-npm install foundation-cli --global
-```
+#### Foundation
+ - It was hard to understand at first especially using the foundation mixins but along the way I was able to get a hang of it.
 
-Use this command to set up a blank Foundation for Sites project with this template:
+#### Foundation Watch
+ - Foundation watch makes my computer slow so I would recommend using gulp to run tasks instead.
+ 
+#### SASS
+ - Its pretty much like CSS but you need to know what properties to override if your using a framework and make it work in SASS.
+ 
+#### jQuery
+ - Used a combination of Vanilla Javascript and jQuery but its an ease to use plug-ins in jQuery.
+ 
+### Resources/Credits:
 
-```bash
-foundation new --framework sites --template basic
-```
+Image by Stephanie Edwards from Pixabay
 
-The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.
-
-### Manual Setup
-
-To manually set up the template, first download it with Git:
-
-```bash
-git clone https://github.com/zurb/foundation-sites-template projectname
-```
-
-Then open the folder in your command line, and install the needed dependencies:
-
-```bash
-cd projectname
-npm install
-```
-
-Finally, run `npm start` to run the Sass compiler. It will re-run every time you save a Sass file.
+RRZEicons [CC BY-SA 3.0 
