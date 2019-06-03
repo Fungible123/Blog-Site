@@ -195,7 +195,6 @@ input[type='text'] {
 
 .myblog-thumbnails {
     margin: 10px;
-    max-width: 200px;
     img {
         width: 100%;
         transition: all .3s ease-in-out;
@@ -237,13 +236,6 @@ input[type='text'] {
         h4 {
             font-family: $fourth-font;
         }
-    }
-}
-
-.house-img {
-    height: 60%;
-    @include breakpoint(medium down) {
-        height: 80%;
     }
 }
 
@@ -311,6 +303,7 @@ input[type='text'] {
 }
 
 .right-footer {
+    text-align: center;
     h4 {
         color: $white;
         font-family: $fourth-font;
